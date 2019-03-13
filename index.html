@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Planetcar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./node_modules/moment/min/moment.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="./Material-Time-Picker-Plugin-jQuery-MDTimePicker/mdtimepicker.js"></script>
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <link href="./Material-Time-Picker-Plugin-jQuery-MDTimePicker/mdtimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   
+</head>
+<body>
+     <header>
+            <div class="container">                
+                        <nav class="navbar navbar-expand-lg navbar-light ">
+                                <a class="navbar-brand" id="logo" href="#"><img  src="images/logo.png" alt="logo"></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end"  id="navbarNav">
+                                  <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Car park</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Contacts</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                        </nav>
+                
+        </div>
+     </header>
+     <section class="banner">
+        <div class="container">
+                <div class="row ">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="images/road1.png" alt="First slide">
+                                    <div class="carousel-content d-flex flex-column justify-content-center">
+                                            <h1 class="display-3" >Car Hire in Cyprus</h1>
+                                            <p class="lead">Search for the best car hire offers over the island</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/road2.png" alt="Second slide">
+                                    <div class="carousel-content d-flex flex-column justify-content-center">
+                                            <h1 class="display-3">Car Hire in Cyprus</h1>
+                                            <p class="lead">Search for the best car hire offers over the island</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/road3.png" alt="Third slide">
+                                    <div class="carousel-content d-flex flex-column justify-content-center">
+                                            <h1 class="display-3" >Car Hire in Cyprus</h1>
+                                            <p class="lead">Search for the best car hire offers over the island</p>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div> 
+                </div>
+                <main >
+                                <div class="container">
+                                        <div class="row">
+                                                <div class="col-lg-1 "></div>
+                                                <div class="col-lg-10 col-ml-12 bg-white">
+                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                                <li class="nav-item col-4 text-center">
+                                                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-car"></i> Rent a Car</a>
+                                                                </li>
+                                                                <li class="nav-item col-4 text-center">
+                                                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-bus"></i> Transfers</a>
+                                                                </li>
+                                                                <li class="nav-item col-4 text-center">
+                                                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Excursions /Chauffeur service</a>
+                                                                </li>
+                                                        </ul>
+                                                        <div class="tab-content" id="myTabContent">
+                                                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                                        <div class="form-group mt-4">                                                
+                                                                                <form id="search-form">                                                                                           
+                                                                                        <div class="form-row">
+                                                                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">                                                    
+                                                                                                <div class="input-group">
+                                                                                                        <select id="pickUp" class="form-control">
+                                                                                                                <option selected>Pick-up location</option>
+                                                                                                                <option>Nicosia</option>
+                                                                                                                <option>Limassol</option>
+                                                                                                                <option>Larnaka</option>
+                                                                                                                <option>Paphos</option>
+                                                                                                                <option>Kyrenia</option>
+                                                                                                        </select>
+                                                                                                        <div class="input-group-append">
+                                                                                                                <span class="input-group-text"><i class="fas fa-angle-double-right"></i></span>
+                                                                                                        </div> 
+                                                                                                        <select id="dropOff" class="form-control">
+                                                                                                                <option selected>Drop-off location</option>
+                                                                                                                <option>Nicosia</option>
+                                                                                                                <option>Limassol</option>
+                                                                                                                <option>Larnaka</option>
+                                                                                                                <option>Paphos</option>
+                                                                                                                <option>Kyrenia</option>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="form-group col-lg-3 col-md-6 col-sm-12">
+                                                                                                <div class="input-group date "> <span class="input-group-addon"></span>
+                                                                                                <input type="text" class="form-control" id='dateAt' autocomplete="off"placeholder="Date to" >
+                                                                                                <div class="input-group-append">
+                                                                                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                                                                                </div>   
+                                                                                                <input type="text" class="form-control" id="timeAt" autocomplete="off"placeholder="Time to">
+                                                                                                <div class="input-group-append">
+                                                                                                        <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                                                                </div> 
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        <div class="form-group col-lg-3 col-md-6 col-sm-12">
+                                                                                                <div class="input-group date "> <span class="input-group-addon"></span>
+                                                                                                        <input type="text" class="form-control" id="dateTo" autocomplete="off"placeholder="Date to">
+                                                                                                        <div class="input-group-append">
+                                                                                                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                                                                                        </div>   
+                                                                                                        <input type="text" class="form-control" id="timeTo" autocomplete="off"placeholder="Time to">
+                                                                                                        <div class="input-group-append">
+                                                                                                                <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                                                                        </div> 
+                                                                                                </div>                                                          
+                                                                                                <button type="submit" class="btn btn-primary mt-3 btn-block"><span><i class="fas fa-search"></i></span></i> Search a car</button> 
+                                                                                        </div>
+                                                                                        </div>                                                                    
+                                                                                </form>                                                                                                                                
+                                                                        </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                </p>
+                                                                <p>
+                                                                        <i class="far fa-smile-wink"></i>                                                        
+                                                                this service will be implemented soon
+                                                                </p>
+                                                        </div>
+                                                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                </p>
+                                                                <p>
+                                                                        <i class="far fa-smile-wink"></i>                                                        
+                                                                and this one 
+                                                                </p></div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-lg-1"></div>
+                                        </div>
+                                        </div>
+                </main>
+        </div>
+     </section>
+     <section class="information">
+                <div class="container bg-light">
+                    <div class="row position-relative">
+                           <div class="col-lg-1"></div>
+                           <div class="col-lg-10 col-ml-12 pb-4 inf">
+                               <div class="row">
+                                       <div class="col-lg-5 col-ml-12">
+                                               <ul class="list-group list-group-flush ">
+                                                       <li class="list-group-item bg-light"> <i class="fas fa-gas-pump"></i>  Average petrol price - €1.2</li>
+                                                       <li class="list-group-item bg-light"><i class="fas fa-building"></i>  Head office and reservations/Rental location</li>
+                                                       <li class="list-group-item bg-light"><i class="fas fa-plane"></i>  Airport rental location</li>
+                                                     </ul>
+                                       </div>
+                                       <div class="col-lg-7 col-ml-12">
+                                               <h1>About Us</h1>
+                                               <p>Welcome to PlanetCar!</p>
+                                               <p>That wonderful feeling – you start the engine and your adventure begins…</p>
+                                               <p>At <a href="#">PlanetCar.com</a> everything we do is about giving you the freedom to discover more. We’ll move mountains to find you the right rental car, and bring you a smooth, hassle-free experience from start to finish.</p>
+                                               <p>Our founders had the simple idea of wanting to make renting cars much better. And we’ve flourished because our customers love how we work.</p>
+                                       </div>
+                               </div>
+                               
+                           </div>
+                           <div class="col-lg-1"></div>
+                    </div>
+                    
+                </div>
+                
+        </section>
+        <footer>
+                        <div class="container pt-3">
+                            <div class="row"><div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                   <div class="row">
+                                           <div class="col-lg-4 col-sm-12 text-center d-flex align-items-end">
+                                               <p>© 2017 PlanetCar.com
+                                                       Lordou Vyronos, Nicosia 1080, Cyprus</p>
+                                           </div>
+                                           <div class="col-lg-4 col-sm-12 text-center">
+                                               <div>
+                                                   <span class="align-text-bottom">
+                                                           <i class="fab fa-facebook-f"></i>
+                                                           <i class="fab fa-twitter"></i>
+                                                           <i class="fab fa-google-plus-g"></i>
+                                                           <i class="fab fa-youtube"></i>
+                                                           <i class="fab fa-instagram"></i>
+                                                   </span>
+                                                       
+                                               </div>
+                                               <div>
+                                                       <a class="navbar-brand" id="logo" href="#"><img  src="images/logo.png" alt="logo"></a>
+                                               </div>
+                                               <div>
+                                                       <nav class="navbar navbar-expand-lg navbar-light">                                                
+                                                               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                                                 <ul class="navbar-nav">
+                                                                       <li class="nav-item active">
+                                                                               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                                                             </li>
+                                                                             <li class="nav-item">
+                                                                               <a class="nav-link" href="#">Car park</a>
+                                                                             </li>
+                                                                             <li class="nav-item">
+                                                                               <a class="nav-link" href="#">About us</a>
+                                                                             </li>
+                                                                             <li class="nav-item">
+                                                                               <a class="nav-link" href="#">Contacts</a>
+                                                                       </li>
+                                                                 </ul>
+                                                               </div>
+                                                             </nav>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-4 col-sm-12 d-flex align-items-end justify-content-center">
+                                               <div>
+                                                       <i class="fab fa-cc-visa"></i>
+                                                       <i class="fab fa-cc-mastercard"></i>
+                                                       <i class="fab fa-cc-amex"></i>
+                                                       <i class="fab fa-cc-paypal"></i>
+                                               </div>
+                                           </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-1"></div></div>
+                            
+                        </div>
+                    </footer> 
+                    
+        
+
+     <script src="js/script.js"></script>
+</body>
+</html>
